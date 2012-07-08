@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-
-
 <?php if ( have_posts() ) : ?>
 			<div class="contentholder">
 	<?php  $i = 1; while ( have_posts() ) : the_post(); ?>
@@ -39,31 +37,16 @@
 
 			<?php if ( have_posts() ) : ?>
 
-			<div id="controls">
-				<ul class="view">
-					<li id="listtoggle" class="inactive">List</li>
-					<li id="maptoggle" class="selected">Map</li>
-				</ul>
-				<ul class="format">
-					<li id="videotoggle" class="selected">Video</li>
-					<li id="audiotoggle" class="selected">Audio</li>
-					<li id="imagetoggle" class="selected">Image</li>
-					<li id="standardtoggle" class="selected">Text</li>
-					<li id="linktoggle" class="selected">Link</li>
-				</ul>
 
-				<div class="addthis-category"><?php get_template_part('addthis'); ?></div>
-
-			</div>
 
 			<div id="map"></div>
 
-			<div class="listview">
+			<div id="content" class="listview">
 				
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<div class="item <?php marty_get_post_format(); ?>">
-					<h3><?php if ( !is_single() && !is_page() ) { ?><a href="<?php the_permalink(); ?>"><?php } ?><?php the_title(); ?><?php if ( !is_single() && !is_page() ) { ?></a><?php } ?><?php marty_post_format(' <span>(',')</span>'); ?></h3>
+					<h3><?php if ( !is_single() && !is_page() ) { ?><a href="<?php the_permalink(); ?>"><?php } ?><?php the_title(); ?><?php if ( !is_single() && !is_page() ) { ?></a><?php } ?></h3>
 					
 					<?php the_content(); ?>
 
