@@ -185,7 +185,7 @@ jQuery(document).ready(function($) {
 	}
 
 
-	$('.format li').bind('click', function() {
+	$('#formats li').bind('click', function() {
 		if ( $(this).hasClass('selected') ) {
 				$(this).removeClass('selected');
 			} else {
@@ -197,36 +197,7 @@ jQuery(document).ready(function($) {
 	});
 
 
-	$('.listview').hide();
 
-	$('#listtoggle').bind('click', function() {
-		if ( $(this).hasClass('selected') ) {
-				$(this).removeClass('selected');
-				$('#maptoggle').addClass('selected');
-				$('#map').show();
-				$('.listview').hide();
-			} else {
-				$(this).addClass('selected');
-				$('#maptoggle').removeClass('selected');
-				$('#map').hide();
-				$('.listview').show();
-			}
-	});
-
-	$('#maptoggle').bind('click', function() {
-		if ( $(this).hasClass('selected') ) {
-				$(this).removeClass('selected');
-				$('#listtoggle').addClass('selected');
-				$('#map').hide();
-				$('.listview').show();
-			} else {
-				$(this).addClass('selected');
-				$('#listtoggle').removeClass('selected');
-				$('#map').show();
-				$('.listview').hide();
-			}
-
-	});
 
 
 });

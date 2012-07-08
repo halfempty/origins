@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
+				<div id="content">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="item">
 					<h3><?php the_title(); ?></h3>
@@ -9,7 +10,7 @@
 
 					</div>
 				<?php endwhile; ?>
-
+				</div>
 			<?php else : ?>
 				<div class="item">
 				<h2>Page not found.</h2>
