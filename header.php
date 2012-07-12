@@ -40,9 +40,9 @@
 	<div class="header">
 		<div class="headerwrapper">
 	
-		<div id="info">
-			<h4><span>Info</span></h4>
-			<div class="modalwrap">	
+		<div id="info" class="thinbutton">
+			<h4><span>About</span></h4>
+			<div class="modalwrap"><div class="infotick">
 				<div id="infomodal">
 				<?php $info_query = new WP_Query('post_type=page&name=about'); ?>
 
@@ -50,20 +50,20 @@
 							<?php the_content(); ?>			
 				<?php endwhile; ?>
 				</div>		
-			</div>
+			</div></div>
 		</div>
 
-		<div id="share">
+		<div id="share" class="thinbutton">
 			<h4><span>Share</span></h4>
-			<div class="modalwrap">	
+			<div class="modalwrap"><div class="sharetick">
 				<div id="sharemodal">
 				<?php get_template_part('addthis'); ?>
 				</div>
-			</div>
+			</div></div>
 		</div>
 
-		<div id="contribute">
-			<h4><a href="/submit">Contribute</a></h4>
+		<div id="contribute" <?php if ( is_page('submit') ) echo 'class="selected"'; ?> >
+			<h4><a href="/submit"><span>Contribute</span></a></h4>
 		</div>
 
 		<?php if ( !is_page() && !is_single() ) : ?>
@@ -78,9 +78,9 @@
 			</div>
 		</div>
 
-		<div id="formats">
+		<div id="formats" class="thinbutton">
 			<h4><span>Formats</span></h4>
-			<div class="modalwrap formatsmodalwrap">	
+			<div class="modalwrap formatsmodalwrap"><div class="formatstick">
 				<div id="formatsmodal" class="togglestyle">
 					<ul>
 					<li id="videotoggle" class="selected"><div><span><a>Video</a></span></div></li>
@@ -90,7 +90,7 @@
 					<li id="linktoggle" class="selected"><div><span><a>Link</a></span></div></li>
 					</ul>
 				</div>
-			</div>
+			</div></div>
 		</div>
 
 		<?php endif; ?>
