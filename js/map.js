@@ -1,5 +1,3 @@
-
-
 var gmarkers = []; // An array to hold our markers for later manipulation
 var infowindow = new google.maps.InfoWindow();
 var map = null;
@@ -11,80 +9,15 @@ function initialize() {
 	for (var i = 0; i < locations.length; i++) {  
 
 		if ( locations[i].format == 'image' ) {
-			if ( locations[i].group == 'A' ) {
-				var thisicon = bluemarkera;
-			} else if ( locations[i].group == 'A' ) {
-				var thisicon = bluemarker;			
-			} else if ( locations[i].group == 'B' ) {
-				var thisicon = bluemarkerb;
-			} else if ( locations[i].group == 'C' ) {
-				var thisicon = bluemarkerc;
-			} else if ( locations[i].group == 'D' ) {
-				var thisicon = bluemarkerd;
-			} else {
-				var thisicon = bluemarker;
-			}
-
+			var thisicon = imagemarker;
 		} else if ( locations[i].format == 'link' ) {
-			if ( locations[i].group == 'A' ) {
-				var thisicon = greenmarkera;
-			} else if ( locations[i].group == 'A' ) {
-				var thisicon = greenmarker;			
-			} else if ( locations[i].group == 'B' ) {
-				var thisicon = greenmarkerb;
-			} else if ( locations[i].group == 'C' ) {
-				var thisicon = greenmarkerc;
-			} else if ( locations[i].group == 'D' ) {
-				var thisicon = greenmarkerd;
-			} else {
-				var thisicon = greenmarker;
-			}
-
+			var thisicon = linkmarker;
 		} else if ( locations[i].format == 'audio' ) {
-			if ( locations[i].group == 'A' ) {
-				var thisicon = orangemarkera;
-			} else if ( locations[i].group == 'A' ) {
-				var thisicon = orangemarker;			
-			} else if ( locations[i].group == 'B' ) {
-				var thisicon = orangemarkerb;
-			} else if ( locations[i].group == 'C' ) {
-				var thisicon = orangemarkerc;
-			} else if ( locations[i].group == 'D' ) {
-				var thisicon = orangemarkerd;
-			} else {
-				var thisicon = orangemarker;
-			}
-
+			var thisicon = audiomarker;
 		} else if ( locations[i].format == 'video' ) {
-			if ( locations[i].group == 'A' ) {
-				var thisicon = redmarkera;
-			} else if ( locations[i].group == 'A' ) {
-				var thisicon = redmarker;			
-			} else if ( locations[i].group == 'B' ) {
-				var thisicon = redmarkerb;
-			} else if ( locations[i].group == 'C' ) {
-				var thisicon = redmarkerc;
-			} else if ( locations[i].group == 'D' ) {
-				var thisicon = redmarkerd;
-			} else {
-				var thisicon = redmarker;
-			}
-
+			var thisicon = videomarker;
 		} else {
-			if ( locations[i].group == 'A' ) {
-				var thisicon = pinkmarkera;
-			} else if ( locations[i].group == 'A' ) {
-				var thisicon = pinkmarker;			
-			} else if ( locations[i].group == 'B' ) {
-				var thisicon = pinkmarkerb;
-			} else if ( locations[i].group == 'C' ) {
-				var thisicon = pinkmarkerc;
-			} else if ( locations[i].group == 'D' ) {
-				var thisicon = pinkmarkerd;
-			} else {
-				var thisicon = pinkmarker;
-			}
-
+			var thisicon = standardmarker;
 		}
 
 
@@ -94,7 +27,8 @@ function initialize() {
 	    icon: thisicon,
 	    map: map,
 		format : locations[i].format,
-		group : locations[i].group
+		group : locations[i].group,
+		optimized : false
 	  });
 
 	// Save a reference to the newly created marker for later manipulation
@@ -127,11 +61,6 @@ jQuery(document).ready(function($) {
 			if ( $('#audiotoggle').hasClass('selected') ) var audiotoggle = "on";
 			if ( $('#standardtoggle').hasClass('selected') ) var standardtoggle = "on";			
 
-			if ( $('#atoggle').hasClass('selected') ) var atoggle = "on";
-			if ( $('#btoggle').hasClass('selected') ) var btoggle = "on";
-			if ( $('#ctoggle').hasClass('selected') ) var ctoggle = "on";
-			if ( $('#dtoggle').hasClass('selected') ) var dtoggle = "on";
-
 		  for (var i = 0; i < gmarkers.length; i++) {
 
 		    if (gmarkers[i].format == "link" && linktoggle == "on") {
@@ -147,8 +76,6 @@ jQuery(document).ready(function($) {
 			} else {
 		      gmarkers[i].setVisible(false);				
 			}
-
-			
 
 		  }
 
@@ -197,11 +124,4 @@ jQuery(document).ready(function($) {
 	});
 
 
-
-
-
 });
-
-
-
-
