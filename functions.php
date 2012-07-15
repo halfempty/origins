@@ -1,5 +1,36 @@
 <?php
 
+function enqueue_theme_scripts() {
+
+    $themeStyle = get_bloginfo('stylesheet_directory') . '/style.css';
+    wp_register_style('themeStyle',$themeStyle);
+    wp_enqueue_style( 'themeStyle');
+
+	wp_enqueue_script( 'jquery');
+
+	// Heights
+    $heightsjs = get_bloginfo('stylesheet_directory') . '/js/heights.js';
+	wp_register_script('heightsjs',$heightsjs);
+	wp_enqueue_script( 'heightsjs',array('jquery'));
+
+	// Simplemodal
+    $simplemodal = get_bloginfo('stylesheet_directory') . '/js/jquery.simplemodal.1.4.2.min.js';
+	wp_register_script('simplemodal',$simplemodal);
+	wp_enqueue_script( 'simplemodal',array('jquery'));
+
+	// Modals
+    $modalsjs = get_bloginfo('stylesheet_directory') . '/js/modals.js';
+	wp_register_script('modalsjs',$modalsjs);
+	wp_enqueue_script( 'modalsjs',array('jquery'));
+
+
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');
+
+
+
+
 add_theme_support( 'post-formats', array( 'link', 'image', 'video', 'audio' ) );
 
 function marty_post_format($before, $after) {

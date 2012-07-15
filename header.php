@@ -19,22 +19,19 @@
 
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon.ico" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/jquery.simplemodal.1.4.2.min.js"></script>	
 
 <?php if ( !is_page() && !is_single() ) { ?>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/map.js"></script>	
 <?php } ?>
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/style.js"></script>	
 
+	
 <?php wp_head(); ?>
 </head>
 
-<body <?php if ( !is_page() && !is_single() ) : ?> onload="initialize()" <?php endif; ?>>
+<body <?php if ( !is_page() && !is_single() ) : ?> onload="initialize()" <?php endif; ?> <?php if ( is_home() ) : ?> class="home" <?php endif; ?>>
 		
 	<div class="header">
 		<div class="headerwrapper">
@@ -46,7 +43,7 @@
 				<?php $info_query = new WP_Query('post_type=page&name=about'); ?>
 
 				<?php while ($info_query->have_posts()) : $info_query->the_post(); ?>
-							<?php the_content(); ?>			
+					<?php the_content(); ?>			
 				<?php endwhile; ?>
 				</div>		
 			</div></div>
@@ -103,16 +100,16 @@
 		<div class="wrapper">
 		<div class="anotherwrapper">
 		<ul>
-		<li class="all first <?php if ( is_home() ) echo ' selected '?>"><a href="/">All</a></li>
-		<li class="featured <?php if ( is_category('chinese-american-museum') ) echo ' selected '?>"><a href="/category/chinese-american-museum/">Featured</a></li>
-		<li class="arts <?php if ( is_category('art-entertainment-recreation') ) echo ' selected '?>"><a href="/category/art-entertainment-recreation/">Arts &amp; Entertainment</a></li>
-		<li class="cultural <?php if ( is_category('cultural-community-centers') ) echo ' selected '?>"><a href="/category/cultural-community-centers/">Cultural &amp; Community Centers</a></li>
-		<li class="family <?php if ( is_category('family-stories') ) echo ' selected '?>"><a href="/category/family-stories/">Family Stories</a></li>
-		<li class="food <?php if ( is_category('food-restaurants') ) echo ' selected '?>"><a href="/category/food-restaurants/">Food</a></li>
-		<li class="history <?php if ( is_category('historic-places') ) echo ' selected '?>"><a href="/category/historic-places/">History</a></li>
-		<li class="civic <?php if ( is_category('politics-civic-engagement') ) echo ' selected '?>"><a href="/category/politics-civic-engagement/">Civic Engagement</a></li>
-		<li class="religion <?php if ( is_category('religion') ) echo ' selected '?>"><a href="/category/religion/">Religion &amp; Spirituality</a></li>
-		<li class="shops last <?php if ( is_category('shopping') ) echo ' selected '?>"><a href="/category/shopping/">Shops</a></li>
+		<li class="all first <?php if ( is_home() || is_category('locations') ) echo ' selected '?>"><a href="/locations/">All</a></li>
+		<li class="featured <?php if ( is_category('featured') ) echo ' selected '?>"><a href="/locations/featured/">Featured</a></li>
+		<li class="arts <?php if ( is_category('art-entertainment-recreation') ) echo ' selected '?>"><a href="/locations/art-entertainment-recreation/">Arts &amp; Entertainment</a></li>
+		<li class="cultural <?php if ( is_category('cultural-community-centers') ) echo ' selected '?>"><a href="/locations/cultural-community-centers/">Cultural &amp; Community Centers</a></li>
+		<li class="family <?php if ( is_category('family-stories') ) echo ' selected '?>"><a href="/locations/family-stories/">Family Stories</a></li>
+		<li class="food <?php if ( is_category('food-restaurants') ) echo ' selected '?>"><a href="/locations/food-restaurants/">Food</a></li>
+		<li class="history <?php if ( is_category('historic-places') ) echo ' selected '?>"><a href="/locations/historic-places/">History</a></li>
+		<li class="civic <?php if ( is_category('politics-civic-engagement') ) echo ' selected '?>"><a href="/locations/politics-civic-engagement/">Civic Engagement</a></li>
+		<li class="religion <?php if ( is_category('religion') ) echo ' selected '?>"><a href="/locations/religion/">Religion &amp; Spirituality</a></li>
+		<li class="shops last <?php if ( is_category('shopping') ) echo ' selected '?>"><a href="/locations/shopping/">Shops</a></li>
 		</ul>
 		</div>
 		</div>
