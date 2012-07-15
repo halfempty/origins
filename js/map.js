@@ -1,3 +1,10 @@
+var imagemarker = new google.maps.MarkerImage("/wp-content/themes/origins-dev/images/marker-picture.png", null, null, new google.maps.Point(0, 34), new google.maps.Size(20, 34));
+var linkmarker = new google.maps.MarkerImage("/wp-content/themes/origins-dev/images/marker-link.png", null, null, new google.maps.Point(0, 34), new google.maps.Size(20, 34));
+var audiomarker = new google.maps.MarkerImage("/wp-content/themes/origins-dev/images/marker-audio.png", null, null, new google.maps.Point(0, 34), new google.maps.Size(20, 34));
+var videomarker = new google.maps.MarkerImage("/wp-content/themes/origins-dev/images/marker-video.png", null, null, new google.maps.Point(0, 34), new google.maps.Size(20, 34));
+var standardmarker = new google.maps.MarkerImage("/wp-content/themes/origins-dev/images/marker-standard.png", null, null, new google.maps.Point(0, 34), new google.maps.Size(20, 34));
+var shadow = new google.maps.MarkerImage("/wp-content/themes/origins-dev/images/marker-shadow.png", null, null, new google.maps.Point(0, 34), new google.maps.Size(37, 34));
+
 var gmarkers = []; // An array to hold our markers for later manipulation
 var infowindow = new google.maps.InfoWindow();
 var map = null;

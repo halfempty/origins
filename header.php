@@ -27,7 +27,6 @@
 
 <?php if ( !is_page() && !is_single() ) { ?>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/markers.js"></script>	
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/map.js"></script>	
 <?php } ?>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/style.js"></script>	
@@ -83,11 +82,11 @@
 			<div class="modalwrap formatsmodalwrap"><div class="formatstick">
 				<div id="formatsmodal" class="togglestyle">
 					<ul>
-					<li id="videotoggle" class="selected"><div><span><a>Video</a></span></div></li>
-					<li id="audiotoggle" class="selected"><div><span><a>Audio</a></span></div></li>
-					<li id="imagetoggle" class="selected"><div><span><a>Image</a></span></div></li>
-					<li id="standardtoggle" class="selected"><div><span><a>Text</a></span></div></li>
-					<li id="linktoggle" class="selected"><div><span><a>Link</a></span></div></li>
+						<li id="standardtoggle" class="selected"><div><span><a>Standard</a></span></div></li>
+						<li id="linktoggle" class="selected"><div><span><a>Link</a></span></div></li>
+						<li id="videotoggle" class="selected"><div><span><a>Video</a></span></div></li>
+						<li id="imagetoggle" class="selected"><div><span><a>Image</a></span></div></li>
+						<li id="audiotoggle" class="selected"><div><span><a>Audio</a></span></div></li>
 					</ul>
 				</div>
 			</div></div>

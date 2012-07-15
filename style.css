@@ -24,7 +24,7 @@ a {text-decoration: none; color: #f62a2a; font-family:'Frutiger LT W01 65 Bold';
 a:hover {color: #d72323;}
 h1, h2, h3, h4 {font-family:'Frutiger LT W01 65 Bold';}
 
-h3 {font-weight: lighter; color: #717073; font-size: 24px; font-family:'Frutiger LT W01 65 Bold'; margin-bottom: .5em;}
+h3 {font-weight: lighter; color: #717073; font-size: 24px; font-family:'Frutiger LT W01 65 Bold'; margin: 0;}
 h3 span {font-size: .7em; text-transform: uppercase; margin-left: .25em; }
 h3 span a {font-weight: lighter; color: #717073; }
 
@@ -101,7 +101,7 @@ background: linear-gradient(top, rgba(0,0,0,0.56) 0%,rgba(0,0,0,0.25) 100%); /* 
 
 .infotick {background: url(images/tick.svg) 25px top no-repeat; padding: 17px; margin-top: 3px}
 .sharetick {background: url(images/tick.svg) 80px top no-repeat; padding: 17px; margin-top: 3px}
-.formatstick {background: url(images/tick.svg) 85px top no-repeat; padding: 17px; margin-top: 3px}
+.formatstick {background: url(images/tick.svg) 105px top no-repeat; padding: 17px; margin-top: 3px}
 
 #sharemodal, #formatsmodal, #infomodal {
 	background: #606060; /* Old browsers */
@@ -225,20 +225,31 @@ background: linear-gradient(top, rgba(0,0,0,0.56) 0%,rgba(0,0,0,0.25) 100%); /* 
 /* Map */
 
 .contentholder {display: none;}
-#infowindowfooter {margin-bottom: 0;}
-.permalink {background: url(images/iconPermalink.gif) no-repeat left center; padding-left: 20px;}
-.commentslink {font-size: .7em;  margin-left: .25em; font-weight: lighter; color: #717073;  white-space:nowrap;}
 
-/* List View */
+.infowindow { color: #444; }
+.infowindow p { margin-bottom: 0; }
 
 #content { overflow-y: scroll; -webkit-overflow-scrolling: touch;}
-.item {margin: 1em; background: #f0ede5; color: #444; padding: .1em 1.5em .5em 1.5em; overflow: hidden; border-radius: 4px;}
+
+
+.item {margin: 1em; color: #444; background: #f0ede5; padding: .25em 1.5em .75em 1.5em; overflow: hidden; border-radius: 4px;}
+.listview .item {padding: .75em 1em;}
+
+.address {margin-top: 0; font-size: .9em; color: #666;}
+
+.titleblock {padding-left: 30px;}
+.standard .titleblock {background: url(images/marker-standard.png) 0 4px no-repeat; background-size: 20px 34px;}
+.link .titleblock {background: url(images/marker-link.png) 0 4px no-repeat; background-size: 20px 34px;}
+.video .titleblock {background: url(images/marker-video.png) 0 4px no-repeat; background-size: 20px 34px;}
+.image .titleblock {background: url(images/marker-picture.png) 0 4px no-repeat; background-size: 20px 34px;}
+.audio .titleblock {background: url(images/marker-audio.png) 0 4px no-repeat; background-size: 20px 34px;}
+
 
 .back {font-size: .8em}
 
 .alignright {float: right; margin: 0 0 .5em 1em ;}
 
-#comments { font-size: 14px; border-top: 1px solid #ccc; clear: both;}
+#comments { font-size: 14px; border-top: 1px solid #ccc; clear: both; padding-top: 1em}
 #comments h3 {font-size: 14px;}
 
 

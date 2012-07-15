@@ -5,7 +5,14 @@
 	<?php  $i = 1; while ( have_posts() ) : the_post(); ?>
 
 					<?php if ( get_geocode_latlng($post->ID) !== '' ) : ?>
-					<div id="item<?php echo $i; ?>" class="infowindow"><?php the_content(); ?><p class="infowindowfooter"><a class="permalink" <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <a class="commentslink" href="<?php comments_link(); ?>"><?php comments_number(' 0 Comments',' 1 Comment',' % comments'); ?></a></p></div>
+					<div id="item<?php echo $i; ?>" class="infowindow">
+						<?php the_content(); ?>
+						<p class="infowindowfooter">
+							<a class="permalink" <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
+							<span class="address"><?php echo get_geocode_address($post->ID); ?></span></p>
+<!--							<p><a class="commentslink" href="<?php comments_link(); ?>"><?php comments_number(' 0 Comments',' 1 Comment',' % comments'); ?></a></p> -->
+						
+					</div>
 					<?php endif; ?>
 
 				<?php $i++;	endwhile; ?>
@@ -19,8 +26,7 @@
 						title : '<?php the_title(); ?>', 
 						latlng : new google.maps.LatLng<?php echo get_geocode_latlng($post->ID); ?>, 
 						format : '<?php marty_get_post_format(); ?>', 
-						info : document.getElementById('item<?php echo $i; ?>'), 
-						group : '<?php echo get_post_meta($post->ID, 'marker_icon', true); ?>'
+						info : document.getElementById('item<?php echo $i; ?>')
 					},
 					<?php endif; ?>
 				<?php $i++; endwhile; ?>
@@ -46,7 +52,10 @@
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<div class="item <?php marty_get_post_format(); ?>">
-					<h3><?php if ( !is_single() && !is_page() ) { ?><a href="<?php the_permalink(); ?>"><?php } ?><?php the_title(); ?><?php if ( !is_single() && !is_page() ) { ?></a><?php } ?></h3>
+						<div class="titleblock">
+							<h3><?php if ( !is_single() && !is_page() ) { ?><a href="<?php the_permalink(); ?>"><?php } ?><?php the_title(); ?><?php if ( !is_single() && !is_page() ) { ?></a><?php } ?></h3>
+							<p class="address"><?php echo get_geocode_address($post->ID); ?></p>
+						</div>
 					
 					<?php the_content(); ?>
 
