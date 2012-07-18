@@ -22,11 +22,10 @@ em {font-family:'FrutigerLTW01-46LightIt'; font-style: normal;}
 
 a {text-decoration: none; color: #f62a2a; font-family:'Frutiger LT W01 65 Bold';}
 a:hover {color: #d72323;}
-h1, h2, h3, h4 {font-family:'Frutiger LT W01 65 Bold';}
+h1, h3, h4 {font-family:'Frutiger LT W01 65 Bold';}
 
+h2 {font-weight: lighter; color: #717073; font-size: 24px; font-family:'Frutiger LT W01 65 Bold'; }
 h3 {font-weight: lighter; color: #717073; font-size: 24px; font-family:'Frutiger LT W01 65 Bold'; margin: 0;}
-h3 span {font-size: .7em; text-transform: uppercase; margin-left: .25em; }
-h3 span a {font-weight: lighter; color: #717073; }
 
 strong {font-family:'Frutiger LT W01 65 Bold';}
 
@@ -56,7 +55,57 @@ h1 {margin: 2px 400px; text-align: center; font-size: 19px; }
 .header h1 a:hover {color: #999;}
 
 #info {float: left; }
-#infomodal {border-radius: 4px; padding: .5em 1.5em; width: 400px; text-align: left; font-size: 14px; float: left;}
+#infomodal {border-radius: 4px; padding: .5em; width: 500px; text-align: left; font-size: 14px; float: left; 	box-shadow: 0 7px 14px 0 rgba(0,0,0,0.5);
+	background: #606060;
+	background: -moz-linear-gradient(top, #606060 0%, #333333 17%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(17%,#333333));
+	background: -webkit-linear-gradient(top, #606060 0%,#333333 17%);
+	background: -o-linear-gradient(top, #606060 0%,#333333 17%);
+	background: -ms-linear-gradient(top, #606060 0%,#333333 17%);
+	background: linear-gradient(to bottom, #606060 0%,#333333 17%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#333333',GradientType=0 );
+}
+
+
+.title {border-radius: 6px; margin-bottom: .5em; padding: 3em 0; 
+	box-shadow: inset 0 0 5px #000;
+
+	background: #414141;
+	background: -moz-linear-gradient(top, #414141 0%, #000000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#414141), color-stop(100%,#000000));
+	background: -webkit-linear-gradient(top, #414141 0%,#000000 100%);
+	background: -o-linear-gradient(top, #414141 0%,#000000 100%);
+	background: -ms-linear-gradient(top, #414141 0%,#000000 100%);
+	background: linear-gradient(to bottom, #414141 0%,#000000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#414141', endColorstr='#000000',GradientType=0 );
+}
+
+.title h5 {width: 253px; height: 106px; margin: 0 auto; background: url(images/title.png) no-repeat; background-size: 253px 106px;}
+.title h5 span {display: none}
+
+.infocontent {border: 1px solid #7b7b6e; border-radius: 6px; background: #a4a493;}
+.infocontent .wrap {  border-radius: 5px; color: #333; font-family:'Frutiger LT W01 65 Bold'; margin: 1px;
+box-shadow: inset 0 0 3px #e1e3cd;
+background: #ebefd5; /* Old browsers */
+background: -moz-linear-gradient(top, #d2d3bc 0%, #ebefd5 60%, #e6e8ca 62%, #bbbda4 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d2d3bc), color-stop(60%,#ebefd5), color-stop(62%,#e6e8ca), color-stop(100%,#bbbda4)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #d2d3bc 0%,#ebefd5 60%,#e6e8ca 62%,#bbbda4 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #d2d3bc 0%,#ebefd5 60%,#e6e8ca 62%,#bbbda4 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #d2d3bc 0%,#ebefd5 60%,#e6e8ca 62%,#bbbda4 100%); /* IE10+ */
+background: linear-gradient(to bottom, #d2d3bc 0%,#ebefd5 60%,#e6e8ca 62%,#bbbda4 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2d3bc', endColorstr='#bbbda4',GradientType=0 ); /* IE6-9 */
+
+}
+
+.infocontent .wrap .padding {padding: .5em 1.75em;}
+.infocontent em {font-family:'FrutigerLTW01-66BoldIta'; }
+
+ul.credits {list-style: none; margin: 0; padding: 0; font-size: .7em; color: #444; border-top: 1px solid #838376; font-family:'FrutigerLTW01-55Roman'; }
+ul.credits a {color: #444; font-family:'Frutiger LT W01 65 Bold';}	
+ul.credits li {display: inline-block; margin-left: 2.5em; padding: 1em 2.5em .75em 0 }
+ul.credits li.first {border-right: 1px solid #838376;}
+
+
 
 #share {float: left; }
 #sharemodal {border-radius: 4px; padding: 1em 1em .5em 1em; width: 310px; float: left;}
@@ -103,7 +152,7 @@ background: linear-gradient(top, rgba(0,0,0,0.56) 0%,rgba(0,0,0,0.25) 100%); /* 
 .sharetick {background: url(images/tick.svg) 80px top no-repeat; padding: 17px; margin-top: 3px}
 .formatstick {background: url(images/tick.svg) 105px top no-repeat; padding: 17px; margin-top: 3px}
 
-#sharemodal, #formatsmodal, #infomodal {
+#sharemodal, #formatsmodal {
 	background: #606060; /* Old browsers */
 	background: -moz-linear-gradient(top, #606060 0%, #333333 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#333333)); /* Chrome,Safari4+ */
@@ -252,19 +301,31 @@ background: linear-gradient(top, rgba(0,0,0,0.56) 0%,rgba(0,0,0,0.25) 100%); /* 
 #comments { font-size: 14px; border-top: 1px solid #ccc; clear: both; padding-top: 1em}
 #comments h3 {font-size: 14px;}
 
-
-/* Footer */
-
-.credits {font-size: .7em; list-style: none; margin: 0; padding: 0 0 1em 0; text-align: right; }
-.credits li {display: inline; padding: 0 0 0 2em;}
-.credits a {color: #fff;}
-
-
 /* Forms */
-.gform_wrapper {max-width: 600px !important;}
 
-.gsection {border-bottom: none !important;}
-.gsection_title {display: none;}
+.gform_heading {}
 
-.submit-formats ul {border-bottom: 1px dotted #CCC; overflow: hidden;}
-.submit-formats li {float: left; margin-right: 2em !important;}
+.gfield_label {display: block !important;}
+
+.gfield {padding: 1em 0; overflow: hidden !important; display: block; border-top: 1px solid rgba(0,0,0,0.1); }
+.gfield input, .gfield textarea { font-size: 18px !important; border: none !important; width: 100% !important; padding: .5em !important; border-radius: 6px;}
+.gfield input.medium  { width: 100% !important; }
+
+
+
+.gfield_description {width: 350px !important; float: left !important; font-size: 16px !important; color: #666; font-family:'FrutigerLTW01-45Light' !important;}		
+.ginput_container {margin-left: 370px !important; width: 50% !important;}
+
+.formnewsletter .ginput_container, .formpermission .ginput_container {margin-left: 0 !important; width: 80% !important; font-size: 16px !important; color: #666; font-family:'FrutigerLTW01-45Light' !important;}
+.formnewsletter .ginput_container ul li label, .formpermission .ginput_container ul li label {margin-left: 40px !important;}
+
+.formtitle {}
+.formtitle {}
+.formaddress {}
+.formdescription textarea {}
+
+.formimage {}
+.formaudio {}
+.formname {}
+.formemail {}
+

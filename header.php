@@ -40,11 +40,24 @@
 			<h4><span>About</span></h4>
 			<div class="modalwrap"><div class="infotick">
 				<div id="infomodal">
-				<?php $info_query = new WP_Query('post_type=page&name=about'); ?>
+					<div class="title"><h5><span>Origns: The Birth and Rise of Chinese American Communities in Los Angeles</span></h5></div>
 
-				<?php while ($info_query->have_posts()) : $info_query->the_post(); ?>
-					<?php the_content(); ?>			
-				<?php endwhile; ?>
+				<?php $info_query = new WP_Query('post_type=page&name=about'); ?>
+				
+				<div class="infocontent"><div class="wrap">
+					<div class="padding">
+					<?php while ($info_query->have_posts()) : $info_query->the_post(); ?>
+						<?php the_content(); ?>			
+					<?php endwhile; ?>
+					</div>
+
+				<ul class="credits">
+					<li class="first">Exhibit designed by <a href="http://thinkexhibits.org">THINK Jacobson &amp; Roth</a></li>
+					<li class="second">Website by <a href="http://camla.org">Marty Spellerberg</a></li>
+				</ul>
+				
+				</div></div>
+
 				</div>		
 			</div></div>
 		</div>
