@@ -72,7 +72,7 @@
 					<?php if ( is_category() ) : ?>
 
 						<h2>No entries</h2>
-						<p>No locations have been submitted for this category.<br /><a href="/submit">Please contribute!</a></p>
+						<p>No locations have been submitted for the <strong><?php single_cat_title(); ?></strong> category.<br /><a href="/submit">Please contribute!</a></p>
 
 					<?php else: ?>
 

@@ -14,9 +14,11 @@ font-family:'FrutigerLTW01-56Italic';
 font-family:'Frutiger LT W01 65 Bold';
 font-family:'FrutigerLTW01-66BoldIta';
 
+
+
 */
 
-body {background: url(images/texture.png) #212121; color: #fff; font-family:'FrutigerLTW01-45Light';  line-height: 1.4; font-size: 18px; margin: 0; padding: 0;}
+body {background: url(images/texture.png) #212121; background-size: 1024px 512px; color: #fff; font-family:'FrutigerLTW01-45Light';  line-height: 1.4; font-size: 18px; margin: 0; padding: 0;}
 
 em {font-family:'FrutigerLTW01-46LightIt'; font-style: normal;}
 

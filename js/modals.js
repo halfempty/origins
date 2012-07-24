@@ -72,6 +72,7 @@ jQuery(document).ready(function($) {
 				$('#maptoggle').removeClass('selected');
 				$('#map').hide();
 				$('.listview').show();
+				$('html, body').animate({ scrollTop: $('.listview').offset().top }, 'slow');
 			}
 		});
 

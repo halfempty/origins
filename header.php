@@ -29,15 +29,6 @@
 
 	
 <?php wp_head(); ?>
-
-<?php if ( is_home() ) :?>
-	<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$('#info').showmodal();
-	});
-	</script>
-<?php endif; ?>
-
 </head>
 
 <body <?php if ( !is_page() && !is_single() ) : ?> onload="initialize()" <?php endif; ?>>
