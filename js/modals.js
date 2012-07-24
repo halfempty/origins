@@ -88,12 +88,11 @@ jQuery(document).ready(function($) {
 
 		});
 
-
 		// On Load
 
 		$('.listview').hide();
 
-		$('.home #info').showmodal();
+
 
 
 });

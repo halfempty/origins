@@ -1,5 +1,5 @@
 /*
-Theme Name: Origins (Dev)
+Theme Name: Origins
 Theme URI: http://camla.org
 Author: Marty Spellerberg
 Author URI: http://martyspellerberg.com/
@@ -279,11 +279,14 @@ background: linear-gradient(top, rgba(0,0,0,0.56) 0%,rgba(0,0,0,0.25) 100%); /* 
 .infowindow p { margin-bottom: 0; }
 
 #content { overflow-y: scroll; -webkit-overflow-scrolling: touch;}
-
+.listview {overflow-y: scroll; -webkit-overflow-scrolling: touch; background: url(images/texture.png) #212121;}
 
 .item {margin: 1em; color: #444; background: #f0ede5; padding: .25em 1.5em .75em 1.5em; overflow: hidden; border-radius: 4px;}
+
+
 .listview .item {padding: .75em 1em;}
 
+	
 .address {margin: 0; font-size: .9em; color: #666;}
 
 .titleblock {padding-left: 30px;}

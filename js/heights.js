@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 		var headertop = 0;
 
 		if ($('#wpadminbar').length != 0) {
-			headertop =+ $('#wpadminbar').height();
+			headertop =+ $('#wpadminbar').outerHeight();
 		} 
 	// console.log('wpadminbar.' + headertop);
 
@@ -16,6 +16,8 @@ jQuery(document).ready(function($) {
 		}); 
 
 		var headerheight = $('.header').outerHeight();
+		headerheight= headerheight - 1;
+		
 	// console.log('Header.' + headerheight);
 
 		var footerheight = $('#categories').outerHeight();
@@ -24,7 +26,8 @@ jQuery(document).ready(function($) {
 		mapheight = mapheight - headertop;		
 		mapheight = mapheight - headerheight;
 		mapheight = mapheight - footerheight;
-
+		mapheight = mapheight + 1;
+	
 		modalpadding = headertop + headerheight;
 	// console.log('Padding.' + modalpadding);
 
