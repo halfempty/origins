@@ -23,6 +23,11 @@ function enqueue_theme_scripts() {
 	wp_register_script('modalsjs',$modalsjs);
 	wp_enqueue_script( 'modalsjs',array('jquery'));
 
+	// Markers
+    $markersjs = get_bloginfo('stylesheet_directory') . '/js/markers.js';
+	wp_register_script('markersjs',$markersjs);
+	wp_enqueue_script( 'markersjs',array('jquery'));
+
 
 }
 

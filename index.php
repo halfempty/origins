@@ -10,7 +10,6 @@
 						<p class="infowindowfooter">
 							<a class="permalink" <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
 							<span class="address"><?php echo get_geocode_address($post->ID); ?></span></p>
-<!--							<p><a class="commentslink" href="<?php comments_link(); ?>"><?php comments_number(' 0 Comments',' 1 Comment',' % comments'); ?></a></p> -->
 						
 					</div>
 					<?php endif; ?>
@@ -34,11 +33,6 @@
 
 			</script>
 
-			<?php else : ?>
-				<div class="item">
-				<h2>Page not found.</h2>
-				<p>Apologies, but no results were found for the requested archive.</p>
-				</div>
 			<?php endif; ?>
 
 			<?php if ( have_posts() ) : ?>
@@ -57,9 +51,10 @@
 							<p class="address"><?php echo get_geocode_address($post->ID); ?></p>
 						</div>
 					
-					<?php the_content(); ?>
-
 					<?php if ( is_single() ) { ?>
+
+						<?php the_content(); ?>
+
 						<script type="text/javascript">
 						  var disqus_developer = 1;
 						</script>
@@ -73,10 +68,19 @@
 				<?php endwhile; ?>
 
 			<?php else : ?>
-				<div class="item">
-				<h2>Page not found.</h2>
-				<p>Apologies, but no results were found for the requested archive.</p>
-				</div>
+				<div id="content"><div class="notfound">
+					<?php if ( is_category() ) : ?>
+
+						<h2>No entries</h2>
+						<p>No locations have been submitted for this category.<br /><a href="/submit">Please contribute!</a></p>
+
+					<?php else: ?>
+
+						<h2>Page not found</h2>
+						<p>There is no page at this location.<br /><a href="/">Home</a></p>
+
+					<?php endif; ?>
+				</div></div>
 			<?php endif; ?>
 			</div>
 
