@@ -16,11 +16,9 @@ jQuery(document).ready(function($) {
 					hideModals();
 				},
 				onShow: function (){
-
 					$('#simplemodal-overlay').css({
 				 		'margin-top': thismargin
 					});
-
 				}
 			});
 		};
@@ -42,14 +40,6 @@ jQuery(document).ready(function($) {
 			}
 		});
 
-		$('#share h4').click(function(){
-			if ( $('#share').hasClass('open') ) {
-				hideModals();
-			} else {
-			  	$('#share').showmodal();
-			}
-		});
-
 		$('#info h4').click(function(){
 			if ( $('#info').hasClass('open') ) {
 				hideModals();
@@ -68,9 +58,9 @@ jQuery(document).ready(function($) {
 			if ( $(this).hasClass('selected') ) {
 			} else {
 				hideModals();
-				$(this).addClass('selected');
 				$('#maptoggle').removeClass('selected');
 				$('#map').hide();
+				$(this).addClass('selected');
 				$('.listview').show();
 				$('html, body').animate({ scrollTop: $('.listview').offset().top }, 'slow');
 			}
@@ -89,11 +79,8 @@ jQuery(document).ready(function($) {
 
 		});
 
-		// On Load
-
-		$('.listview').hide();
-
-
-
+		if ( $('body').hasClass('home') ) {
+			$('#info').showmodal();
+		}
 
 });

@@ -18,7 +18,7 @@ font-family:'FrutigerLTW01-66BoldIta';
 
 */
 
-body {background: url(images/texture.png) #212121; background-size: 1024px 512px; color: #fff; font-family:'FrutigerLTW01-45Light';  line-height: 1.4; font-size: 18px; margin: 0; padding: 0;}
+body {background: #212121; color: #fff; font-family:'FrutigerLTW01-45Light';  line-height: 1.4; font-size: 18px; margin: 0; padding: 0;}
 
 em {font-family:'FrutigerLTW01-46LightIt'; font-style: normal;}
 
@@ -49,7 +49,7 @@ blockquote {margin: auto 0; color: #717073; font-size: 21px; font-family:'Frutig
 .header h4 {margin: 0; padding: 0;}
 
 #simplemodal-overlay {background: #000}
-.modalwrap {display: none; position: fixed; top: 0; left: 0; }
+.modalwrap { display: none; position: fixed; top: 0; left: 0;}
 .formatsmodalwrap {right: 0; left: auto !important; }
 
 h1 {margin: 2px 400px; text-align: center; font-size: 19px; }
@@ -57,7 +57,7 @@ h1 {margin: 2px 400px; text-align: center; font-size: 19px; }
 .header h1 a:hover {color: #999;}
 
 #info {float: left; }
-#infomodal {border-radius: 4px; padding: .5em; width: 500px; text-align: left; font-size: 14px; float: left; 	box-shadow: 0 7px 14px 0 rgba(0,0,0,0.5);
+#infomodal {border-radius: 4px; padding: .5em; width: 500px; text-align: left; font-size: 14px; float: left; box-shadow: 0 7px 14px 0 rgba(0,0,0,0.5);
 	background: #606060;
 	background: -moz-linear-gradient(top, #606060 0%, #333333 17%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(17%,#333333));
@@ -101,16 +101,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2d3bc', end
 
 .infocontent .wrap .padding {padding: .5em 1.75em;}
 .infocontent em {font-family:'FrutigerLTW01-66BoldIta'; }
-
+.infocontent strong {font-family:'Frutiger LT W01 65 Bold'; display: block; }
+	
 ul.credits {list-style: none; margin: 0; padding: 0; font-size: .7em; color: #444; border-top: 1px solid #838376; font-family:'FrutigerLTW01-55Roman'; }
 ul.credits a {color: #444; font-family:'Frutiger LT W01 65 Bold';}	
 ul.credits li {display: inline-block; margin-left: 2.5em; padding: 1em 2.5em .75em 0 }
 ul.credits li.first {border-right: 1px solid #838376;}
 
-
-
-#share {float: left; }
-#sharemodal {border-radius: 4px; padding: 1em 1em .5em 1em; width: 310px; float: left;}
 
 #contribute {float: right; border-radius: 7px; border: 1px solid rgba(0,0,0,0.3); border-right: 1px solid rgba(0,0,0,0.5); border-bottom: 1px solid rgba(0,0,0,0.5); box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5); }
 #contribute h4 { display: block; border-radius: 6px; color: #fff; ;
@@ -148,13 +145,12 @@ background: linear-gradient(top, rgba(0,0,0,0.56) 0%,rgba(0,0,0,0.25) 100%); /* 
 #maptoggle {width: 50px;}
 
 #formats {float: right; position: relative}
-#formatsmodal { padding: 1em; border-radius: 4px; float: right;}
+
 
 .infotick {background: url(images/tick.svg) 25px top no-repeat; padding: 17px; margin-top: 3px}
-.sharetick {background: url(images/tick.svg) 80px top no-repeat; padding: 17px; margin-top: 3px}
 .formatstick {background: url(images/tick.svg) 105px top no-repeat; padding: 17px; margin-top: 3px}
 
-#sharemodal, #formatsmodal {
+#formatsmodal { padding: 1em; border-radius: 4px; float: right;
 	background: #606060; /* Old browsers */
 	background: -moz-linear-gradient(top, #606060 0%, #333333 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#606060), color-stop(100%,#333333)); /* Chrome,Safari4+ */
@@ -275,13 +271,14 @@ background: linear-gradient(top, rgba(0,0,0,0.56) 0%,rgba(0,0,0,0.25) 100%); /* 
 
 /* Map */
 
+#map {background: url(images/texture.png) #212121; background-size: 1024px 512px;}
+
 .contentholder {display: none;}
 
 .infowindow { color: #444; }
 .infowindow p { margin-bottom: 0; }
 
-#content { overflow-y: scroll; -webkit-overflow-scrolling: touch;}
-.listview {overflow-y: scroll; -webkit-overflow-scrolling: touch; background: url(images/texture.png) #212121;}
+#content { overflow-y: scroll; -webkit-overflow-scrolling: touch; background: url(images/texture.png) #212121; background-size: 1024px 512px;}
 
 .item {margin: 1em; color: #444; background: #f0ede5; padding: .25em 1.5em .75em 1.5em; overflow: hidden; border-radius: 4px;}
 

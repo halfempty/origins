@@ -12,7 +12,8 @@ jQuery(document).ready(function($) {
 
 		$('.header').css({
 	 		'position': 'fixed',
-			'top' : headertop + 'px'		
+			'top' : '0',
+			'marginTop' : headertop + 'px'		
 		}); 
 
 		var headerheight = $('.header').outerHeight();

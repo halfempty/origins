@@ -15,7 +15,7 @@
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 	?></title>
 
-	<script type="text/javascript" src="http://fast.fonts.com/jsapi/6e25e19c-6643-4496-b606-d165e32d9d5e.js"></script>
+	<script type="text/javascript" src="http://fast.fonts.com/jsapi/14aff9ea-9fba-4660-8457-dbcd7f870d1e.js"></script>
 
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon.ico" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -31,45 +31,36 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php if ( !is_page() && !is_single() ) : ?> onload="initialize()" <?php endif; ?>>
+<body <?php if ( !is_page() && !is_single() ) : ?> onload="initialize()" <?php endif; ?> <?php if ( is_home() ) : ?>class="home"<?php endif; ?>>
 		
 	<div class="header">
 		<div class="headerwrapper">
 	
-		<div id="info" class="thinbutton">
-			<h4><span>About</span></h4>
-			<div class="modalwrap"><div class="infotick">
-				<div id="infomodal">
-					<div class="title"><h5><span>Origns: The Birth and Rise of Chinese American Communities in Los Angeles</span></h5></div>
+			<div id="info" class="thinbutton">
+				<h4><span>About</span></h4>
+				<div class="modalwrap"><div class="infotick">
+					<div id="infomodal">
+						<div class="title"><h5><span>Origns: The Birth and Rise of Chinese American Communities in Los Angeles</span></h5></div>
 
-				<?php $info_query = new WP_Query('post_type=page&name=about'); ?>
-				
-				<div class="infocontent"><div class="wrap">
-					<div class="padding">
-					<?php while ($info_query->have_posts()) : $info_query->the_post(); ?>
-						<?php the_content(); ?>			
-					<?php endwhile; ?>
-					</div>
+					<?php $info_query = new WP_Query('post_type=page&name=about'); ?>
 
-				<ul class="credits">
-					<li class="first">Exhibit designed by <a href="http://thinkexhibits.org">THINK Jacobson &amp; Roth</a></li>
-					<li class="second">Website by <a href="http://camla.org">Marty Spellerberg</a></li>
-				</ul>
-				
+					<div class="infocontent"><div class="wrap">
+						<div class="padding">
+						<?php while ($info_query->have_posts()) : $info_query->the_post(); ?>
+							<?php the_content(); ?>			
+						<?php endwhile; ?>
+						</div>
+
+					<ul class="credits">
+						<li class="first">Exhibit designed by <a href="http://thinkexhibits.org">THINK Jacobson &amp; Roth</a></li>
+						<li class="second">Website by <a href="http://camla.org">Marty Spellerberg</a></li>
+					</ul>
+
+					</div></div>
+
+					</div>		
 				</div></div>
-
-				</div>		
-			</div></div>
-		</div>
-
-		<div id="share" class="thinbutton">
-			<h4><span>Share</span></h4>
-			<div class="modalwrap"><div class="sharetick">
-				<div id="sharemodal">
-				<?php get_template_part('addthis'); ?>
-				</div>
-			</div></div>
-		</div>
+			</div>
 
 		<div id="contribute" <?php if ( is_page('submit') ) echo 'class="selected"'; ?> >
 			<h4><a href="/submit"><span>Contribute</span></a></h4>

@@ -28,7 +28,6 @@ function enqueue_theme_scripts() {
 	wp_register_script('markersjs',$markersjs);
 	wp_enqueue_script( 'markersjs',array('jquery'));
 
-
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');

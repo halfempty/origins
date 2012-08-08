@@ -41,7 +41,7 @@
 
 			<div id="map"></div>
 
-			<div id="content" class="listview">
+			<div id="content" class="listview" style="display: none;">
 				
 				<?php while ( have_posts() ) : the_post(); ?>
 
